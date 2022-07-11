@@ -35,7 +35,9 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./grafana/datasources/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      - ./grafana/provisioning/datasources/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      # - ./grafana/provisioning/dashboards/dashboard.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      # - ./grafana/dashboards:/var/lib/grafana/dashboards
     restart: always
     depends_on:
       - prometheus

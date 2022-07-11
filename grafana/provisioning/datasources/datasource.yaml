@@ -16,9 +16,4 @@ datasources:
     isDefault: true
     version: 1
     editable: false
-
-  # - name: CloudWatch
-  #   type: cloudwatch
-  #   jsonData:
-  #     authType: default
-  #     defaultRegion: ap-northeast-1
+  
