@@ -27,9 +27,15 @@ services:
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     restart: always
+    depends_on:
+      - nginx-exporter
 
   grafana:
     image: grafana/grafana
     ports:
       - 3000:3000
+    volumes:
+      - ./grafana/datasources/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
     restart: always
+    depends_on:
+      - prometheus
