@@ -6,7 +6,7 @@
 ## 起動手順
 ```shell
 # Clusterの作成
-$ kind create cluster --config cluster.yml
+$ kind create cluster --config cluster.yaml
 
 # Ingress-Controllerの作成
 $ kubectl apply -f \
