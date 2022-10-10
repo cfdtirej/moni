@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+configMapGenerator:
+- name: nginx-configmap-volume
+  files:
+  - ./config/nginx/conf.d/default.conf
+resources:
+- namespace.yaml
+- deployment.yaml
+- nodeport.yaml
+- ingress.yaml
+- hpa.yaml
